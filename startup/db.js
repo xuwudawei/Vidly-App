@@ -3,6 +3,6 @@ const winston = require('winston');
 const config = require("config");
 
 module.exports = function () {
-    mongoose.connect(config.get('db'),{ useNewUrlParser: true, uri_decode_auth: true })
-        .then(() => console.log("Connected to mongoDB successfully ...."));
+    mongoose.connect(config.get('db'),{ useNewUrlParser: true, useUnifiedTopology: true })
+        .then(() => console.log("Connected to mongoDB successfully ..."));
 }
